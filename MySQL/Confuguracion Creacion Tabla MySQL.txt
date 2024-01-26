@@ -1,0 +1,20 @@
+CREATE TABLE lecturas (
+	id_lectura int NOT NULL AUTO_INCREMENT,
+	fecha_lectura timestamp NOT NULL,
+	PRIMARY KEY (id_lectura)
+);
+
+
+-------
+
+CREATE TABLE mediciones (
+	id_medicion int NOT NULL AUTO_INCREMENT,
+	volts_medicion float NOT NULL,
+	lecturas_id int NOT NULL,
+	PRIMARY KEY (id_medicion),
+	CONSTRAINT FK_lectura FOREIGN KEY (lecturas_id)
+	REFERENCES lecturas(id_lectura)
+	ON DELETE CASCADE
+);
+
+
