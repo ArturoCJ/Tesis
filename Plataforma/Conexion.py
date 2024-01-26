@@ -2,8 +2,8 @@ import mysql.connector
 
 db = mysql.connector.connect( #crea conexion con la base de datos
     host = 'localhost', #IP host donde se aloja de db
-    user = 'root', #usuario con el que se conectará
-    password = '12345678', #contraseña del usuario
+    user = '', #usuario con el que se conectará
+    password = '', #contraseña del usuario
     database = 'plataforma' #base de datos a acceder
 )
 
